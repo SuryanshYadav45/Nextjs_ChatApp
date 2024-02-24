@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import Link from 'next/link';
 import {
   Card,
   CardContent,
@@ -43,18 +44,14 @@ export default function Login() {
             <div className="absolute inset-0 flex items-center">
               <span className="w-full border-t" />
             </div>
-            <div className="relative flex justify-center text-xs uppercase">
-              <span className="bg-background px-2 text-muted-foreground">
-                Or continue with
-              </span>
-            </div>
+            
           </div>
           
 
           <p className="mt-2 text-xs text-center text-gray-700 mb-2">
             {" "}
             Don't have an account?{" "}
-            <span className=" text-blue-600 hover:underline">Sign up</span>
+            <Link href="/signup" className=" text-blue-600 hover:underline">Sign up</Link>
           </p>
         </Card>
       </div>

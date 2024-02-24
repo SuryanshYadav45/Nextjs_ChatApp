@@ -1,5 +1,7 @@
 "use client"
 import { Button } from "@/components/ui/button"
+import Link from 'next/link';
+
 import {
   Card,
   CardContent,
@@ -24,9 +26,6 @@ export default function SignUp() {
         <Card>
           <CardHeader className="space-y-1">
             <CardTitle className="text-2xl text-center">SignUp</CardTitle>
-            <CardDescription className="text-center">
-              Enter your email and password to login
-            </CardDescription>
           </CardHeader>
           <CardContent className="grid gap-4">
             <div className="grid gap-2">
@@ -50,18 +49,14 @@ export default function SignUp() {
             <div className="absolute inset-0 flex items-center">
               <span className="w-full border-t" />
             </div>
-            <div className="relative flex justify-center text-xs uppercase">
-              <span className="bg-background px-2 text-muted-foreground">
-                Or continue with
-              </span>
-            </div>
+            
           </div>
           
 
           <p className="mt-2 text-xs text-center text-gray-700 mb-2">
             {" "}
-            Don't have an account?{" "}
-            <span className=" text-blue-600 hover:underline">Sign up</span>
+            Have an account?{" "}
+            <Link href="/login" className=" text-blue-600 hover:underline">Sign </Link>
           </p>
         </Card>
       </div>
