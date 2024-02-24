@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
     }
     const verifyPassword = await bcryptjs.compare(password, user.password);
     if (!verifyPassword) {
-      return NextResponse.json({ message: "Entered password is wrong" });
+      return NextResponse.json({ message: "Entered password is wrong" },{status:401});
     }
     const tokenData = {
       id: user._id,
